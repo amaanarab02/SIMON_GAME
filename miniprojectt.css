@@ -1,0 +1,116 @@
+/* SIMON GAME */
+
+/* Body styling and centering */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #011F3F;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    /* Flexbox centering */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertical center */
+    align-items: center;     /* horizontal center */
+}
+
+/* Header styling */
+.header {
+    text-align: center;
+    margin-top: 1rem;       /* space from top */
+    margin-bottom: 3rem;    /* space between heading and game */
+}
+
+h1 {
+    color: wheat;
+    font-size: 2.2rem;
+    margin: 0.5rem 0;
+}
+
+h2 {
+    color: wheat;
+    font-size: 1.2rem;
+    margin: 0.3rem 0;
+}
+
+/* Wrapper for game and rules */
+.game-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* vertical alignment within wrapper */
+    gap: 3rem;
+    width: 90%;
+    max-width: 1000px;
+}
+
+/* Button container */
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Lines of buttons */
+.line-one, .line-two {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Buttons */
+.btn {
+    height: 200px;
+    width: 200px;
+    border-radius: 20%;
+    border: 10px solid black;
+    cursor: pointer;
+}
+
+.red { background-color: #d95980; }
+.yellow { background-color: #f99b45; }
+.green { background-color: #63aac0; }
+.purple { background-color: purple; }
+
+/* Flash effects */
+.gameflash { background-color: white; }
+.userflash { background-color: black; }
+
+/* Game rules */
+.game-rules {
+    color: wheat;
+    text-align: left;
+    max-width: 300px;
+    padding: 1rem;
+    border: 2px solid wheat;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.05);
+}
+
+/* Media Queries */
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+    .btn { height: 150px; width: 150px; }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .game-wrapper { 
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .btn-container { flex-direction: column; }
+    .line-one, .line-two { width: 100%; justify-content: center; }
+    .btn { height: 120px; width: 120px; margin: 0.8rem; }
+    .game-rules { margin-top: 2rem; }
+}
+
+/* Small phones */
+@media screen and (max-width: 480px) {
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1rem; }
+    .btn { height: 100px; width: 100px; margin: 0.5rem; }
+}
